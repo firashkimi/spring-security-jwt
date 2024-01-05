@@ -37,7 +37,7 @@ public class User implements UserDetails {
     @Override //return or should return a list of roles
     public Collection<? extends GrantedAuthority> getAuthorities() {
         //user can have only one role
-        return List.of(new SimpleGrantedAuthority(role.name()));
+       return role.getAuthorities();
     }
 
     @Override
